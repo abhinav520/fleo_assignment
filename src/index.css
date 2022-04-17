@@ -4,8 +4,8 @@ Variables
 ======
 */
 :root {
-  --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
+  --primaryLightColor: #7eb3f4;
+  --primaryColor:#063251;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -13,7 +13,7 @@ Variables
   --mainOverlay: rgba(35, 10, 36, 0.4);
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #afafaf;
+  --darkGrey: #8f8f8f;
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
@@ -39,7 +39,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--mainBlack);
-  background: var(--mainBackground);
+  background: rgb(44, 44, 64);
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
@@ -68,19 +68,17 @@ img {
   width: 100%;
   display: block;
 }
+h1{
+  text-align: center;
+}
 
-/* 
-====== 
-Buttons 
-======
-*/
 .btn,
 .btn-white,
 .btn-primary {
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
-  color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
+  color: #063251;
+  border: 2px solid #063251;
   padding: 0.45rem 0.8rem;
   display: inline-block;
   transition: var(--mainTransition);
@@ -101,10 +99,10 @@ Buttons
 }
 .btn-white:hover {
   background: var(--mainWhite);
-  color: var(--primaryColor);
+  color: #063251;
 }
 .btn-primary {
-  background: var(--primaryColor);
+  background: #063251;
   color: var(--mainWhite);
   border-color: transparent;
 }
@@ -132,41 +130,18 @@ Navbar
 ======
 */
 .navbar {
-  background: var(--mainWhite);
+  background: rgb(20, 23, 27);
   height: 5rem;
   display: flex;
   align-items: center;
   border-bottom: 2px solid var(--primaryColor);
   box-shadow: var(--lightShadow);
 }
-.nav-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: var(--smallWidth);
-  margin: 0 auto;
-  max-width: var(--fullWidth);
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-.nav-links a {
-  text-transform: capitalize;
-  display: inline-block;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
-  transition: var(--mainTransition);
-}
-.nav-links a:hover {
-  color: var(--primaryColor);
-}
-.logo {
-  width: 12rem;
+
+.navbar h1{
+  padding-left: 17em;
+  color: #d6e4f1;
+  
 }
 /* 
 ====== 
@@ -198,7 +173,7 @@ Error
 }
 /* 
 ====== 
-Cocktails List 
+repos List 
 ======
 */
 
@@ -213,7 +188,7 @@ Cocktails List
   margin-bottom: 3.5rem;
   margin-top: 1rem;
 }
-.cocktails-center {
+.repo-center {
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--fullWidth);
@@ -223,18 +198,18 @@ Cocktails List
   /* align-items: start; */
 }
 @media screen and (min-width: 576px) {
-  .cocktails-center {
+  .repo-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }
 /* 
 ====== 
-Cocktail 
+repo 
 ======
 */
 
-.cocktail {
-  background: var(--mainWhite);
+.repo {
+  background: #d6e4f1;
   margin-bottom: 2rem;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
@@ -242,27 +217,23 @@ Cocktail
   grid-template-rows: auto 1fr;
   border-radius: var(--mainBorderRadius);
 }
-.cocktail:hover {
+.repo:hover {
   box-shadow: var(--darkShadow);
 }
-.cocktail img {
-  height: 20rem;
-  object-fit: cover;
-  border-top-left-radius: var(--mainBorderRadius);
-  border-top-right-radius: var(--mainBorderRadius);
-}
-.cocktail-footer {
+
+.repo-footer {
   padding: 1.5rem;
 }
-.cocktail-footer h3,
-.cocktail-footer h4,
-.cocktail-footer p {
+.repo-footer h3,
+.repo-footer h4,
+.repo-footer p {
   margin-bottom: 0.3rem;
 }
-.cocktail-footer h3 {
+.repo-footer h3 {
   font-size: 2rem;
+  color: #063251;
 }
-.cocktail-footer p {
+.repo-footer p {
   color: var(--darkGrey);
   margin-bottom: 0.5rem;
 }
@@ -292,7 +263,7 @@ Form
   margin-bottom: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.25rem;
-  color: var(--primaryColor);
+  color: #063251;
 }
 .form-control input {
   width: 100%;
@@ -303,52 +274,14 @@ Form
   padding: 0.5rem;
   font-size: 1.2rem;
 }
-/* 
-====== 
-Cocktail
-======
-*/
 
-.cocktail-section {
+
+.repo-section {
   text-align: center;
+  /* color:var(--primaryLightColor) */
 }
-.drink {
-  width: var(--smallWidth);
-  max-width: var(--fullWidth);
-  margin: 0 auto;
-  text-align: left;
-}
-.drink img {
-  border-radius: var(--mainBorderRadius);
-}
-.drink p {
-  font-weight: bold;
-  text-transform: capitalize;
-  line-height: 1.8;
-}
-.drink span {
-  margin-right: 0.5rem;
-}
-.drink-data {
-  background: var(--primaryLightColor);
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--mainBorderRadius);
-  color: var(--primaryColor);
-}
-.drink-info {
-  padding-top: 2rem;
-}
-@media screen and (min-width: 992px) {
-  .drink {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 3rem;
-    align-items: center;
-  }
-  .drink-info {
-    padding-top: 0;
-  }
-}
+
+
 .loader,
 .loader:before,
 .loader:after {
@@ -359,7 +292,7 @@ Cocktail
   height: 4em;
 }
 .loader {
-  color: var(--primaryColor);
+  color: #b1d3eb;
   text-indent: -9999em;
   margin: 88px auto;
   margin-top: 20rem;
@@ -479,6 +412,7 @@ select::-ms-expand {
   padding: 0.35rem 0.75rem;
   width: 5rem;
   height: 2rem;
+  color: #f1f5f8;
   background: var(--clr-primary-7);
   border-color: transparent;
   border-radius: 5px;

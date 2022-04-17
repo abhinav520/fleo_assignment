@@ -39,8 +39,8 @@ export default function RepositoryList() {
   }
   return (
     <section className="section">
-      <h2 className="section-title">Repository</h2>
-      <div className="cocktails-center">
+      {/* <h2 className="section-title">Repository</h2> */}
+      <div className="repo-center">
         {/* {repo.map((item) => {
           return <Repository key={item.id} {...item} />;
         })} */}

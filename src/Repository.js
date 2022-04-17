@@ -13,8 +13,8 @@ export default function Repository({
   html_url,
 }) {
   return (
-    <article className="cocktail">
-      <div className="cocktail-footer">
+    <article className="repo">
+      <div className="repo-footer">
         <h3>{name && name.length>=15?name.slice(0,15)+"...":name}</h3>
         <h4>{owner_name}</h4>
         <p>{description && description.length>=200?description.slice(0,200)+"...":description}</p>
