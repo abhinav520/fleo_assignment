@@ -30,7 +30,7 @@ const AppProvider=({children})=>{
       );
       const data = await response.json();
       console.log(data);
-      const { total_count, items } = data;
+      const { items } = data;
       if (items) {
         const newRepo = items.map((item) => {
           const {
